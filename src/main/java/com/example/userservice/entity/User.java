@@ -1,8 +1,5 @@
 package com.example.userservice.entity;
 
-
-
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
