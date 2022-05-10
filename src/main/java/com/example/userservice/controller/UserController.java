@@ -22,4 +22,11 @@ public class UserController {
         return userService.findUserById(id);
     }
 
+    @PatchMapping("{id}")
+    public User updateUser(@RequestBody User user){
+        userService.updateUserDetail(user);
+        return user;
+
+    }
+
 }

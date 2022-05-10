@@ -20,6 +20,11 @@ public class UserService {
     public Optional<User> findUserById(String id) {
         return Optional.ofNullable(userRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Entity could not be found with id: " + id)));
-}
+    }
+
+    public void updateUserDetail(User user){
+        userRepository.save(user);
+
+    }
 
 }
