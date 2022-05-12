@@ -21,4 +21,11 @@ public class UserService {
                 .orElseThrow(() -> new EntityNotFoundException("Entity could not be found with id: " + id)));
     }
 
+    public void updateUserDetail(User user){
+        userRepository.save(user);
+
+    }
+
+
+
 }

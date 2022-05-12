@@ -17,6 +17,9 @@ public class User {
     private String email;
     private Date birth;
 
+    public User(String anna) {
+    }
+
     public String getId() {
         return id;
     }
