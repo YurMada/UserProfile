@@ -10,17 +10,17 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
     private String userName;
     private String firstName;
     private String lastName;
     private String email;
     private Date birth;
 
-    public User(String anna) {
+    public User() {
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
