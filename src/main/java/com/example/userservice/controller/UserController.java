@@ -1,6 +1,7 @@
 package com.example.userservice.controller;
 
 import com.example.userservice.entity.User;
+import com.example.userservice.message.RabbitApplication;
 import com.example.userservice.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +10,7 @@ import java.util.Optional;
 @RequestMapping("/users")
 public class UserController {
     private final UserService userService;
-
+    RabbitApplication rabbitApplication;
     public UserController(UserService userService) {
         this.userService = userService;
     }
@@ -21,8 +22,9 @@ public class UserController {
     }
 
     @PatchMapping("{id}")
-    public User updateUser(@RequestBody User user){
+    public User updateUser(@RequestBody User user) {
         userService.updateUserDetail(user);
+        rabbitApplication.pushMessage();
         return user;
 
     }
