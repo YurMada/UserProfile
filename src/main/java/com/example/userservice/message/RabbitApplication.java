@@ -27,8 +27,8 @@ public class RabbitApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(RabbitApplication.class, args);
-    }
+       SpringApplication.run(RabbitApplication.class, args);
+   }
 
     //@Scheduled(fixedDelay = 5000)
     public void pushMessage() {
