@@ -16,8 +16,8 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public Optional<User> findUserById(String id) {
-        return Optional.ofNullable(userRepository.findById(id)
+    public Optional<User> findUserById(Long id) {
+        return Optional.ofNullable(userRepository.findById(String.valueOf(id))
                 .orElseThrow(() -> new EntityNotFoundException("Entity could not be found with id: " + id)));
     }
 
