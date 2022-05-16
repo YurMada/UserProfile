@@ -1,0 +1,9 @@
+###
+PATCH http://localhost:8080/users/1
+{
+"userName":"test",
+"firstName":"madicken",
+"lastName":"larsson",
+"email":"madicken.larsson@gmail.com",
+"birth":"2010-11-11"
+}
