@@ -2,7 +2,10 @@ package com.example.userservice.controller;
 
 import com.example.userservice.entity.User;
 import com.example.userservice.service.UserService;
+import com.rabbitmq.client.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -14,6 +17,7 @@ public class UserController {
 
     private final UserService userService;
     RabbitTemplate rabbitTemplate;
+    //ConnectionFactory connectionFactory;
     static final String topicExchangeName = "user-service";
 
     public UserController(UserService userService, RabbitTemplate rabbitTemplate) {
@@ -35,4 +39,15 @@ public class UserController {
         return user;
 
     }
+    /*@Bean
+    public RabbitTemplate rabbitTemplate(final ConnectionFactory connectionFactory) {
+        final var rabbitTemplate = new RabbitTemplate(connectionFactory);
+        rabbitTemplate.setMessageConverter(producerJackson2MessageConverter());
+        return rabbitTemplate;
+    }
+
+    @Bean
+    public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
+        return new Jackson2JsonMessageConverter();
+    }*/
 }

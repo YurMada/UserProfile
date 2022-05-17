@@ -2,8 +2,8 @@ version: '1'
 
 services:
   backend:
-    build: .
-    container_name: charitydb
+    build: .github/workflows
+    container_name: userservice
     ports:
       - "8080:8080"
     environment:
@@ -31,8 +31,8 @@ services:
       - db:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USER=user
-      - MYSQL_PASSWORD=password
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=ksdlkasjfkqewr0923509jsAg
       - MYSQL_DATABASE=user
 
 volumes:
