@@ -64,4 +64,7 @@ public class User {
     public void setBirth(Date birth) {
         this.birth = birth;
     }
+
+    public void setUpdatedAt(Date date) {
+    }
 }
