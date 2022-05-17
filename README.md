@@ -1,14 +1,24 @@
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com)
+![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
+![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)
 
-[![Docker](https://github.com/YurMada/userprofile/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/YurMada/userprofile/actions/workflows/docker-publish.yml)
+![Java CI with Maven](https://github.com/YurMada/userprofile/actions/workflows/maven.yml/badge.svg)
+![Docker Image CI](https://github.com/YurMada/userprofile/actions/workflows/docker-image.yml/badge.svg)
+![GitHub issues](https://img.shields.io/github/issues/yurmada/userprofile)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/yurmada/userprofile)
 # USER-SERVICE : Laboration 3 - Web Services
 
-This is a microservice application built using Spring boot, MySQL.
+This is a microservice application consisting of the following : Spring boot, MySQL, RabbitMQ and Consul.
 
-## How to use :
-1. Create network:
-```docker network create user```
-2. Start consul:
-```docker run -d -p 8500:8500 -p 8600:8600/udp --name=consul --network=user consul agent -server -ui -node=server-1 -bootstrap-expect=1 -client='0.0.0.0'``` 
+##  Deployment :
 
+- Clone the repository
+    - Go to your favourite Integrated Development Environment.
+    - Type the following: `https://github.com/YurMada/userprofile`
+
+## How to start application :
+
+- Install Docker (can be found here  https://www.docker.com)
+- Type the following into your IDE :
+```
+docker-compose up --build
+```
