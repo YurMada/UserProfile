@@ -39,4 +39,5 @@ public class ReceiverConfig {
         simpleMessageListenerContainer.setMessageListener(new Receiver());
         return simpleMessageListenerContainer;
     }
+
 }
