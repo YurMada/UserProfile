@@ -10,11 +10,12 @@ services:
       - SPRING_RABBITMQ_HOST=rabbitmq
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/user
       - MYSQL_HOST=mysql
+      - CONSUL_HOST=consul
 
     depends_on:
       - rabbitmq
       - mysql
-      - consul-node1
+      - consul
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -38,7 +39,19 @@ services:
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=user
 
+  consul:
+    image: bitnami/consul:latest
+    container_name: consul
+    restart: always
+    ports:
+      - "8500:8500"
+    volumes:
+      - 'consul-persistence:/bitnami'
+
+
 
 volumes:
   db:
+    driver: local
+  consul-persistence:
     driver: local
