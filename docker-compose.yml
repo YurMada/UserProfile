@@ -9,9 +9,12 @@ services:
     environment:
       - SPRING_RABBITMQ_HOST=rabbitmq
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/user
+      - MYSQL_HOST=mysql
+
     depends_on:
       - rabbitmq
       - mysql
+      - consul-node1
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -31,9 +34,10 @@ services:
       - db:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USER=root
+      - MYSQL_USER=user
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=user
+
 
 volumes:
   db:
