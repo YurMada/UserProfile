@@ -2,7 +2,7 @@ version: '1'
 
 services:
   backend:
-    build: .github/workflows
+    build: .
     container_name: userservice
     ports:
       - "8080:8080"
@@ -32,7 +32,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_USER=root
-      - MYSQL_PASSWORD=ksdlkasjfkqewr0923509jsAg
+      - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=user
 
 volumes:
