@@ -14,13 +14,6 @@ public class UserServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(UserServiceApplication.class, args);
 
-    }
 
-    @Bean
-    public CommandLineRunner setUpUserForTesting(UserRepository userRepository) {
-        return (args) -> {
-            if (userRepository.findUserById("1") == null)
-                userRepository.save(new User());
-        };
     }
 }
