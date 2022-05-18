@@ -9,4 +9,4 @@ Content-Type: application/json
 "birth":"2010-11-11"
 }
 ###
-GET http://localhost:8080/users/1L
+GET http://localhost:8080/users/1
