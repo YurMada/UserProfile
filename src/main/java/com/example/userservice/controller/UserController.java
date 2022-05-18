@@ -3,15 +3,10 @@ package com.example.userservice.controller;
 import com.example.userservice.entity.User;
 import com.example.userservice.repository.UserRepository;
 import com.example.userservice.service.UserService;
-import com.rabbitmq.client.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.ResourceAccessException;
-
 import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -22,7 +17,7 @@ public class UserController {
 
     private final UserService userService;
     RabbitTemplate rabbitTemplate;
-    //ConnectionFactory connectionFactory;
+
     static final String topicExchangeName = "user-service";
 UserRepository userRepository;
     public UserController(UserService userService, RabbitTemplate rabbitTemplate) {
@@ -48,15 +43,4 @@ UserRepository userRepository;
             rabbitTemplate.convertAndSend(topicExchangeName, "search-service", messageString);
             return ResponseEntity.ok(updatedUser);
 }
-    /*@Bean
-    public RabbitTemplate rabbitTemplate(final ConnectionFactory connectionFactory) {
-        final var rabbitTemplate = new RabbitTemplate(connectionFactory);
-        rabbitTemplate.setMessageConverter(producerJackson2MessageConverter());
-        return rabbitTemplate;
-    }
-
-    @Bean
-    public Jackson2JsonMessageConverter producerJackson2MessageConverter() {
-        return new Jackson2JsonMessageConverter();
-    }*/
 }
