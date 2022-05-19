@@ -1,12 +1,12 @@
 ###
-PATCH http://localhost:8080/users/1
+POST http://localhost:8080/signup
 Content-Type: application/json
+
 {
 "userName":"test",
 "firstName":"madicken",
-"lastName":"larsson",
-"email":"madicken.larsson@gmail.com",
-"birth":"2010-11-11"
+"lastName":"larsson"
 }
 ###
-GET http://localhost:8080/users/1
+GET http://localhost:8080/users/1L
+

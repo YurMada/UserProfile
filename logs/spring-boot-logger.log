@@ -1,0 +1,626 @@
+2022-05-19 08:36:01,099 INFO org.springframework.boot.StartupInfoLogger [main] Starting UserServiceApplication using Java 17.0.1 on LAPTOP-SDMUFAQC with PID 13888 (C:\Users\46736\webb\userprofile\target\classes started by Axblom in C:\Users\46736\webb\userprofile)
+2022-05-19 08:36:01,105 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-19 08:36:01,106 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "usage_message"
+2022-05-19 08:36:04,230 DEBUG io.micrometer.core.util.internal.logging.InternalLoggerFactory [main] Using SLF4J as the default logging framework
+2022-05-19 08:36:04,392 DEBUG com.zaxxer.hikari.HikariConfig [main] Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+2022-05-19 08:36:04,462 DEBUG com.zaxxer.hikari.HikariConfig [main] HikariPool-1 - configuration:
+2022-05-19 08:36:04,465 DEBUG com.zaxxer.hikari.HikariConfig [main] allowPoolSuspension................................false
+2022-05-19 08:36:04,465 DEBUG com.zaxxer.hikari.HikariConfig [main] autoCommit................................true
+2022-05-19 08:36:04,466 DEBUG com.zaxxer.hikari.HikariConfig [main] catalog................................none
+2022-05-19 08:36:04,466 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionInitSql................................none
+2022-05-19 08:36:04,467 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionTestQuery................................none
+2022-05-19 08:36:04,467 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionTimeout................................30000
+2022-05-19 08:36:04,467 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSource................................none
+2022-05-19 08:36:04,467 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceClassName................................none
+2022-05-19 08:36:04,467 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceJNDI................................none
+2022-05-19 08:36:04,468 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceProperties................................{password=<masked>}
+2022-05-19 08:36:04,469 DEBUG com.zaxxer.hikari.HikariConfig [main] driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-05-19 08:36:04,470 DEBUG com.zaxxer.hikari.HikariConfig [main] exceptionOverrideClassName................................none
+2022-05-19 08:36:04,470 DEBUG com.zaxxer.hikari.HikariConfig [main] healthCheckProperties................................{}
+2022-05-19 08:36:04,470 DEBUG com.zaxxer.hikari.HikariConfig [main] healthCheckRegistry................................none
+2022-05-19 08:36:04,470 DEBUG com.zaxxer.hikari.HikariConfig [main] idleTimeout................................600000
+2022-05-19 08:36:04,470 DEBUG com.zaxxer.hikari.HikariConfig [main] initializationFailTimeout................................1
+2022-05-19 08:36:04,470 DEBUG com.zaxxer.hikari.HikariConfig [main] isolateInternalQueries................................false
+2022-05-19 08:36:04,470 DEBUG com.zaxxer.hikari.HikariConfig [main] jdbcUrl................................jdbc:mysql://localhost:3306/user
+2022-05-19 08:36:04,470 DEBUG com.zaxxer.hikari.HikariConfig [main] keepaliveTime................................0
+2022-05-19 08:36:04,470 DEBUG com.zaxxer.hikari.HikariConfig [main] leakDetectionThreshold................................0
+2022-05-19 08:36:04,471 DEBUG com.zaxxer.hikari.HikariConfig [main] maxLifetime................................1800000
+2022-05-19 08:36:04,471 DEBUG com.zaxxer.hikari.HikariConfig [main] maximumPoolSize................................10
+2022-05-19 08:36:04,471 DEBUG com.zaxxer.hikari.HikariConfig [main] metricRegistry................................none
+2022-05-19 08:36:04,471 DEBUG com.zaxxer.hikari.HikariConfig [main] metricsTrackerFactory................................none
+2022-05-19 08:36:04,471 DEBUG com.zaxxer.hikari.HikariConfig [main] minimumIdle................................10
+2022-05-19 08:36:04,471 DEBUG com.zaxxer.hikari.HikariConfig [main] password................................<masked>
+2022-05-19 08:36:04,471 DEBUG com.zaxxer.hikari.HikariConfig [main] poolName................................"HikariPool-1"
+2022-05-19 08:36:04,472 DEBUG com.zaxxer.hikari.HikariConfig [main] readOnly................................false
+2022-05-19 08:36:04,472 DEBUG com.zaxxer.hikari.HikariConfig [main] registerMbeans................................false
+2022-05-19 08:36:04,473 DEBUG com.zaxxer.hikari.HikariConfig [main] scheduledExecutor................................none
+2022-05-19 08:36:04,473 DEBUG com.zaxxer.hikari.HikariConfig [main] schema................................none
+2022-05-19 08:36:04,474 DEBUG com.zaxxer.hikari.HikariConfig [main] threadFactory................................internal
+2022-05-19 08:36:04,474 DEBUG com.zaxxer.hikari.HikariConfig [main] transactionIsolation................................default
+2022-05-19 08:36:04,474 DEBUG com.zaxxer.hikari.HikariConfig [main] username................................"user"
+2022-05-19 08:36:04,474 DEBUG com.zaxxer.hikari.HikariConfig [main] validationTimeout................................5000
+2022-05-19 08:36:04,475 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-05-19 08:36:04,842 DEBUG com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b8b07ae
+2022-05-19 08:36:04,844 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-05-19 08:36:04,957 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2022-05-19 08:36:04,994 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72360b85
+2022-05-19 08:36:05,030 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2310f7ec
+2022-05-19 08:36:05,064 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17629753
+2022-05-19 08:36:05,097 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@275e284d
+2022-05-19 08:36:05,128 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27eea314
+2022-05-19 08:36:05,158 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ad8cd5a
+2022-05-19 08:36:05,189 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76cefa94
+2022-05-19 08:36:05,216 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f6ce2a6
+2022-05-19 08:36:05,243 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d6572ba
+2022-05-19 08:36:05,243 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 connection adder] HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:36:06,610 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 
+	c.e.u.c.UserController:
+	{POST [/users/signup]}: createUser(User)
+	{GET [/users/{id}]}: findUserById(String)
+	{PATCH [/users/{id}]}: updateUser(Long,User)
+2022-05-19 08:36:06,615 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2022-05-19 08:36:06,644 DEBUG org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping [main] 'beanNameHandlerMapping' {}
+2022-05-19 08:36:06,662 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2022-05-19 08:36:08,514 INFO org.springframework.boot.StartupInfoLogger [main] Started UserServiceApplication in 8.867 seconds (JVM running for 9.974)
+2022-05-19 08:36:34,967 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:36:34,968 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:37:04,981 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:37:04,982 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:37:34,984 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:37:34,986 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:38:04,992 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:38:04,993 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:38:35,003 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:38:35,004 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:39:05,010 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:39:05,011 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:39:35,013 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:39:35,013 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:40:05,019 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:40:05,019 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:40:35,021 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:40:35,021 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:41:05,029 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:41:05,030 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:41:35,034 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:41:35,035 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:42:05,046 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:42:05,046 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:42:35,053 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:42:35,053 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:43:05,068 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:43:05,069 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:43:35,081 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:43:35,081 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:44:05,084 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:44:05,084 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:44:35,094 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:44:35,095 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:45:05,108 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:45:05,109 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:45:35,118 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:45:35,118 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:46:05,123 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:46:05,123 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:46:35,138 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:46:35,138 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:47:05,148 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:47:05,149 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:47:35,160 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:47:35,160 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:48:05,162 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:48:05,162 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:48:35,170 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:48:35,171 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:49:05,177 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:49:05,177 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:49:35,178 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:49:35,178 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:50:05,180 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:50:05,181 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:50:35,192 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:50:35,194 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:51:05,203 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:51:05,204 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:51:35,215 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:51:35,216 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:52:05,223 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:52:05,225 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:52:35,240 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:52:35,240 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:53:05,245 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:53:05,245 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:53:35,252 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:53:35,253 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:54:05,257 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:54:05,258 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:54:35,276 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:54:35,279 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:55:05,284 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:55:05,284 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:55:35,287 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:55:35,287 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:56:05,288 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:56:05,289 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:56:35,292 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:56:35,293 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:57:05,299 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:57:05,300 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:57:35,301 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:57:35,302 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:58:05,308 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:58:05,308 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:58:35,310 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:58:35,310 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:59:05,325 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:59:05,325 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 08:59:35,333 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 08:59:35,333 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 09:00:05,336 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 09:00:05,336 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 09:00:35,350 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 09:00:35,350 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 09:01:05,353 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 09:01:05,354 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 09:01:35,368 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 09:01:35,368 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2022-05-19 09:01:54,270 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-05-19 09:01:54,271 DEBUG com.zaxxer.hikari.pool.HikariPool [SpringApplicationShutdownHook] HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 09:01:54,274 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7b8b07ae: (connection evicted)
+2022-05-19 09:01:54,283 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@72360b85: (connection evicted)
+2022-05-19 09:01:54,285 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2310f7ec: (connection evicted)
+2022-05-19 09:01:54,287 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@17629753: (connection evicted)
+2022-05-19 09:01:54,289 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@275e284d: (connection evicted)
+2022-05-19 09:01:54,290 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@27eea314: (connection evicted)
+2022-05-19 09:01:54,291 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5ad8cd5a: (connection evicted)
+2022-05-19 09:01:54,292 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@76cefa94: (connection evicted)
+2022-05-19 09:01:54,294 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1f6ce2a6: (connection evicted)
+2022-05-19 09:01:54,295 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1d6572ba: (connection evicted)
+2022-05-19 09:01:54,297 DEBUG com.zaxxer.hikari.pool.HikariPool [SpringApplicationShutdownHook] HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2022-05-19 09:01:54,297 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-05-19 09:02:05,112 INFO org.springframework.boot.StartupInfoLogger [main] Starting UserServiceApplication using Java 17.0.1 on LAPTOP-SDMUFAQC with PID 23460 (C:\Users\46736\webb\userprofile\target\classes started by Axblom in C:\Users\46736\webb\userprofile)
+2022-05-19 09:02:05,116 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-19 09:02:05,117 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "usage_message"
+2022-05-19 09:02:10,873 DEBUG io.micrometer.core.util.internal.logging.InternalLoggerFactory [main] Using SLF4J as the default logging framework
+2022-05-19 09:02:11,157 DEBUG com.zaxxer.hikari.HikariConfig [main] Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+2022-05-19 09:02:11,241 DEBUG com.zaxxer.hikari.HikariConfig [main] HikariPool-1 - configuration:
+2022-05-19 09:02:11,244 DEBUG com.zaxxer.hikari.HikariConfig [main] allowPoolSuspension................................false
+2022-05-19 09:02:11,245 DEBUG com.zaxxer.hikari.HikariConfig [main] autoCommit................................true
+2022-05-19 09:02:11,245 DEBUG com.zaxxer.hikari.HikariConfig [main] catalog................................none
+2022-05-19 09:02:11,245 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionInitSql................................none
+2022-05-19 09:02:11,246 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionTestQuery................................none
+2022-05-19 09:02:11,246 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionTimeout................................30000
+2022-05-19 09:02:11,246 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSource................................none
+2022-05-19 09:02:11,247 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceClassName................................none
+2022-05-19 09:02:11,247 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceJNDI................................none
+2022-05-19 09:02:11,247 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceProperties................................{password=<masked>}
+2022-05-19 09:02:11,248 DEBUG com.zaxxer.hikari.HikariConfig [main] driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-05-19 09:02:11,249 DEBUG com.zaxxer.hikari.HikariConfig [main] exceptionOverrideClassName................................none
+2022-05-19 09:02:11,249 DEBUG com.zaxxer.hikari.HikariConfig [main] healthCheckProperties................................{}
+2022-05-19 09:02:11,249 DEBUG com.zaxxer.hikari.HikariConfig [main] healthCheckRegistry................................none
+2022-05-19 09:02:11,249 DEBUG com.zaxxer.hikari.HikariConfig [main] idleTimeout................................600000
+2022-05-19 09:02:11,249 DEBUG com.zaxxer.hikari.HikariConfig [main] initializationFailTimeout................................1
+2022-05-19 09:02:11,249 DEBUG com.zaxxer.hikari.HikariConfig [main] isolateInternalQueries................................false
+2022-05-19 09:02:11,249 DEBUG com.zaxxer.hikari.HikariConfig [main] jdbcUrl................................jdbc:mysql://localhost:3306/user
+2022-05-19 09:02:11,250 DEBUG com.zaxxer.hikari.HikariConfig [main] keepaliveTime................................0
+2022-05-19 09:02:11,250 DEBUG com.zaxxer.hikari.HikariConfig [main] leakDetectionThreshold................................0
+2022-05-19 09:02:11,250 DEBUG com.zaxxer.hikari.HikariConfig [main] maxLifetime................................1800000
+2022-05-19 09:02:11,250 DEBUG com.zaxxer.hikari.HikariConfig [main] maximumPoolSize................................10
+2022-05-19 09:02:11,251 DEBUG com.zaxxer.hikari.HikariConfig [main] metricRegistry................................none
+2022-05-19 09:02:11,251 DEBUG com.zaxxer.hikari.HikariConfig [main] metricsTrackerFactory................................none
+2022-05-19 09:02:11,251 DEBUG com.zaxxer.hikari.HikariConfig [main] minimumIdle................................10
+2022-05-19 09:02:11,251 DEBUG com.zaxxer.hikari.HikariConfig [main] password................................<masked>
+2022-05-19 09:02:11,253 DEBUG com.zaxxer.hikari.HikariConfig [main] poolName................................"HikariPool-1"
+2022-05-19 09:02:11,253 DEBUG com.zaxxer.hikari.HikariConfig [main] readOnly................................false
+2022-05-19 09:02:11,253 DEBUG com.zaxxer.hikari.HikariConfig [main] registerMbeans................................false
+2022-05-19 09:02:11,253 DEBUG com.zaxxer.hikari.HikariConfig [main] scheduledExecutor................................none
+2022-05-19 09:02:11,254 DEBUG com.zaxxer.hikari.HikariConfig [main] schema................................none
+2022-05-19 09:02:11,254 DEBUG com.zaxxer.hikari.HikariConfig [main] threadFactory................................internal
+2022-05-19 09:02:11,254 DEBUG com.zaxxer.hikari.HikariConfig [main] transactionIsolation................................default
+2022-05-19 09:02:11,254 DEBUG com.zaxxer.hikari.HikariConfig [main] username................................"user"
+2022-05-19 09:02:11,254 DEBUG com.zaxxer.hikari.HikariConfig [main] validationTimeout................................5000
+2022-05-19 09:02:11,254 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-05-19 09:02:11,770 DEBUG com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@669c2b07
+2022-05-19 09:02:11,773 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-05-19 09:02:11,873 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2022-05-19 09:02:11,917 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@660f92b2
+2022-05-19 09:02:11,961 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@373d5f54
+2022-05-19 09:02:12,007 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72c4e50f
+2022-05-19 09:02:12,053 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@337384c0
+2022-05-19 09:02:12,092 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2dc075cc
+2022-05-19 09:02:12,126 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@217dc557
+2022-05-19 09:02:12,160 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b0b5a14
+2022-05-19 09:02:12,195 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65c5c14e
+2022-05-19 09:02:12,318 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1690e7b2
+2022-05-19 09:02:12,318 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 connection adder] HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 09:02:13,531 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2022-05-19 09:02:13,531 DEBUG com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 09:02:13,532 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@669c2b07: (connection evicted)
+2022-05-19 09:02:13,536 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@660f92b2: (connection evicted)
+2022-05-19 09:02:13,538 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@373d5f54: (connection evicted)
+2022-05-19 09:02:13,539 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@72c4e50f: (connection evicted)
+2022-05-19 09:02:13,541 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@337384c0: (connection evicted)
+2022-05-19 09:02:13,542 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2dc075cc: (connection evicted)
+2022-05-19 09:02:13,544 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@217dc557: (connection evicted)
+2022-05-19 09:02:13,546 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6b0b5a14: (connection evicted)
+2022-05-19 09:02:13,548 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@65c5c14e: (connection evicted)
+2022-05-19 09:02:13,550 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1690e7b2: (connection evicted)
+2022-05-19 09:02:13,553 DEBUG com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2022-05-19 09:02:13,553 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2022-05-19 09:02:13,609 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\46736\webb\userprofile\target\classes\com\example\userservice\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\46736\webb\userprofile\target\classes\com\example\userservice\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.example.userservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! Reason: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.example.userservice.UserServiceApplication.main(UserServiceApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\46736\webb\userprofile\target\classes\com\example\userservice\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.example.userservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! Reason: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.example.userservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! Reason: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! Reason: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1061)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:364)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:322)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:328)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:113)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:87)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 66 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:249)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:250)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:383)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:384)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:95)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 70 common frames omitted
+2022-05-19 09:03:33,964 INFO org.springframework.boot.StartupInfoLogger [main] Starting UserServiceApplication using Java 17.0.1 on LAPTOP-SDMUFAQC with PID 6736 (C:\Users\46736\webb\userprofile\target\classes started by Axblom in C:\Users\46736\webb\userprofile)
+2022-05-19 09:03:33,968 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-19 09:03:33,968 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "usage_message"
+2022-05-19 09:03:35,996 DEBUG io.micrometer.core.util.internal.logging.InternalLoggerFactory [main] Using SLF4J as the default logging framework
+2022-05-19 09:03:36,166 DEBUG com.zaxxer.hikari.HikariConfig [main] Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+2022-05-19 09:03:36,226 DEBUG com.zaxxer.hikari.HikariConfig [main] HikariPool-1 - configuration:
+2022-05-19 09:03:36,229 DEBUG com.zaxxer.hikari.HikariConfig [main] allowPoolSuspension................................false
+2022-05-19 09:03:36,230 DEBUG com.zaxxer.hikari.HikariConfig [main] autoCommit................................true
+2022-05-19 09:03:36,230 DEBUG com.zaxxer.hikari.HikariConfig [main] catalog................................none
+2022-05-19 09:03:36,230 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionInitSql................................none
+2022-05-19 09:03:36,231 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionTestQuery................................none
+2022-05-19 09:03:36,231 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionTimeout................................30000
+2022-05-19 09:03:36,232 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSource................................none
+2022-05-19 09:03:36,232 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceClassName................................none
+2022-05-19 09:03:36,232 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceJNDI................................none
+2022-05-19 09:03:36,233 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceProperties................................{password=<masked>}
+2022-05-19 09:03:36,233 DEBUG com.zaxxer.hikari.HikariConfig [main] driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-05-19 09:03:36,234 DEBUG com.zaxxer.hikari.HikariConfig [main] exceptionOverrideClassName................................none
+2022-05-19 09:03:36,234 DEBUG com.zaxxer.hikari.HikariConfig [main] healthCheckProperties................................{}
+2022-05-19 09:03:36,234 DEBUG com.zaxxer.hikari.HikariConfig [main] healthCheckRegistry................................none
+2022-05-19 09:03:36,234 DEBUG com.zaxxer.hikari.HikariConfig [main] idleTimeout................................600000
+2022-05-19 09:03:36,235 DEBUG com.zaxxer.hikari.HikariConfig [main] initializationFailTimeout................................1
+2022-05-19 09:03:36,235 DEBUG com.zaxxer.hikari.HikariConfig [main] isolateInternalQueries................................false
+2022-05-19 09:03:36,235 DEBUG com.zaxxer.hikari.HikariConfig [main] jdbcUrl................................jdbc:mysql://localhost:3306/user
+2022-05-19 09:03:36,235 DEBUG com.zaxxer.hikari.HikariConfig [main] keepaliveTime................................0
+2022-05-19 09:03:36,236 DEBUG com.zaxxer.hikari.HikariConfig [main] leakDetectionThreshold................................0
+2022-05-19 09:03:36,236 DEBUG com.zaxxer.hikari.HikariConfig [main] maxLifetime................................1800000
+2022-05-19 09:03:36,236 DEBUG com.zaxxer.hikari.HikariConfig [main] maximumPoolSize................................10
+2022-05-19 09:03:36,236 DEBUG com.zaxxer.hikari.HikariConfig [main] metricRegistry................................none
+2022-05-19 09:03:36,236 DEBUG com.zaxxer.hikari.HikariConfig [main] metricsTrackerFactory................................none
+2022-05-19 09:03:36,237 DEBUG com.zaxxer.hikari.HikariConfig [main] minimumIdle................................10
+2022-05-19 09:03:36,237 DEBUG com.zaxxer.hikari.HikariConfig [main] password................................<masked>
+2022-05-19 09:03:36,237 DEBUG com.zaxxer.hikari.HikariConfig [main] poolName................................"HikariPool-1"
+2022-05-19 09:03:36,237 DEBUG com.zaxxer.hikari.HikariConfig [main] readOnly................................false
+2022-05-19 09:03:36,238 DEBUG com.zaxxer.hikari.HikariConfig [main] registerMbeans................................false
+2022-05-19 09:03:36,238 DEBUG com.zaxxer.hikari.HikariConfig [main] scheduledExecutor................................none
+2022-05-19 09:03:36,238 DEBUG com.zaxxer.hikari.HikariConfig [main] schema................................none
+2022-05-19 09:03:36,239 DEBUG com.zaxxer.hikari.HikariConfig [main] threadFactory................................internal
+2022-05-19 09:03:36,239 DEBUG com.zaxxer.hikari.HikariConfig [main] transactionIsolation................................default
+2022-05-19 09:03:36,239 DEBUG com.zaxxer.hikari.HikariConfig [main] username................................"user"
+2022-05-19 09:03:36,239 DEBUG com.zaxxer.hikari.HikariConfig [main] validationTimeout................................5000
+2022-05-19 09:03:36,239 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-05-19 09:03:36,503 DEBUG com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f4a605f
+2022-05-19 09:03:36,506 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-05-19 09:03:36,611 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2022-05-19 09:03:36,638 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@487806e4
+2022-05-19 09:03:36,667 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19e4a42d
+2022-05-19 09:03:36,695 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24435de5
+2022-05-19 09:03:36,724 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1daad970
+2022-05-19 09:03:36,754 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ebc817e
+2022-05-19 09:03:36,783 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7239653c
+2022-05-19 09:03:36,811 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c88053f
+2022-05-19 09:03:36,840 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37fc4393
+2022-05-19 09:03:36,870 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42784e48
+2022-05-19 09:03:36,870 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 connection adder] HikariPool-1 - After adding stats (total=10, active=1, idle=9, waiting=0)
+2022-05-19 09:03:37,494 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2022-05-19 09:03:37,495 DEBUG com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 09:03:37,496 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3f4a605f: (connection evicted)
+2022-05-19 09:03:37,499 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@487806e4: (connection evicted)
+2022-05-19 09:03:37,500 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@19e4a42d: (connection evicted)
+2022-05-19 09:03:37,502 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@24435de5: (connection evicted)
+2022-05-19 09:03:37,503 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1daad970: (connection evicted)
+2022-05-19 09:03:37,504 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2ebc817e: (connection evicted)
+2022-05-19 09:03:37,506 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7239653c: (connection evicted)
+2022-05-19 09:03:37,508 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4c88053f: (connection evicted)
+2022-05-19 09:03:37,510 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@37fc4393: (connection evicted)
+2022-05-19 09:03:37,511 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@42784e48: (connection evicted)
+2022-05-19 09:03:37,513 DEBUG com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2022-05-19 09:03:37,513 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2022-05-19 09:03:46,854 INFO org.springframework.boot.StartupInfoLogger [main] Starting UserServiceApplication using Java 17.0.1 on LAPTOP-SDMUFAQC with PID 23700 (C:\Users\46736\webb\userprofile\target\classes started by Axblom in C:\Users\46736\webb\userprofile)
+2022-05-19 09:03:46,857 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-19 09:03:46,857 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "usage_message"
+2022-05-19 09:03:48,733 DEBUG io.micrometer.core.util.internal.logging.InternalLoggerFactory [main] Using SLF4J as the default logging framework
+2022-05-19 09:03:48,842 DEBUG com.zaxxer.hikari.HikariConfig [main] Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+2022-05-19 09:03:48,886 DEBUG com.zaxxer.hikari.HikariConfig [main] HikariPool-1 - configuration:
+2022-05-19 09:03:48,888 DEBUG com.zaxxer.hikari.HikariConfig [main] allowPoolSuspension................................false
+2022-05-19 09:03:48,888 DEBUG com.zaxxer.hikari.HikariConfig [main] autoCommit................................true
+2022-05-19 09:03:48,889 DEBUG com.zaxxer.hikari.HikariConfig [main] catalog................................none
+2022-05-19 09:03:48,889 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionInitSql................................none
+2022-05-19 09:03:48,889 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionTestQuery................................none
+2022-05-19 09:03:48,889 DEBUG com.zaxxer.hikari.HikariConfig [main] connectionTimeout................................30000
+2022-05-19 09:03:48,890 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSource................................none
+2022-05-19 09:03:48,890 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceClassName................................none
+2022-05-19 09:03:48,890 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceJNDI................................none
+2022-05-19 09:03:48,890 DEBUG com.zaxxer.hikari.HikariConfig [main] dataSourceProperties................................{password=<masked>}
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] driverClassName................................"com.mysql.cj.jdbc.Driver"
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] exceptionOverrideClassName................................none
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] healthCheckProperties................................{}
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] healthCheckRegistry................................none
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] idleTimeout................................600000
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] initializationFailTimeout................................1
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] isolateInternalQueries................................false
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] jdbcUrl................................jdbc:mysql://localhost:3306/user
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] keepaliveTime................................0
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] leakDetectionThreshold................................0
+2022-05-19 09:03:48,891 DEBUG com.zaxxer.hikari.HikariConfig [main] maxLifetime................................1800000
+2022-05-19 09:03:48,892 DEBUG com.zaxxer.hikari.HikariConfig [main] maximumPoolSize................................10
+2022-05-19 09:03:48,892 DEBUG com.zaxxer.hikari.HikariConfig [main] metricRegistry................................none
+2022-05-19 09:03:48,892 DEBUG com.zaxxer.hikari.HikariConfig [main] metricsTrackerFactory................................none
+2022-05-19 09:03:48,892 DEBUG com.zaxxer.hikari.HikariConfig [main] minimumIdle................................10
+2022-05-19 09:03:48,892 DEBUG com.zaxxer.hikari.HikariConfig [main] password................................<masked>
+2022-05-19 09:03:48,894 DEBUG com.zaxxer.hikari.HikariConfig [main] poolName................................"HikariPool-1"
+2022-05-19 09:03:48,894 DEBUG com.zaxxer.hikari.HikariConfig [main] readOnly................................false
+2022-05-19 09:03:48,894 DEBUG com.zaxxer.hikari.HikariConfig [main] registerMbeans................................false
+2022-05-19 09:03:48,894 DEBUG com.zaxxer.hikari.HikariConfig [main] scheduledExecutor................................none
+2022-05-19 09:03:48,894 DEBUG com.zaxxer.hikari.HikariConfig [main] schema................................none
+2022-05-19 09:03:48,894 DEBUG com.zaxxer.hikari.HikariConfig [main] threadFactory................................internal
+2022-05-19 09:03:48,894 DEBUG com.zaxxer.hikari.HikariConfig [main] transactionIsolation................................default
+2022-05-19 09:03:48,894 DEBUG com.zaxxer.hikari.HikariConfig [main] username................................"user"
+2022-05-19 09:03:48,894 DEBUG com.zaxxer.hikari.HikariConfig [main] validationTimeout................................5000
+2022-05-19 09:03:48,894 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-05-19 09:03:49,093 DEBUG com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f4a605f
+2022-05-19 09:03:49,094 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-05-19 09:03:49,204 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2022-05-19 09:03:49,233 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fc0e43
+2022-05-19 09:03:49,258 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@572e20c5
+2022-05-19 09:03:49,282 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49c01920
+2022-05-19 09:03:49,305 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53601b52
+2022-05-19 09:03:49,330 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71c78e03
+2022-05-19 09:03:49,357 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fddfb3a
+2022-05-19 09:03:49,382 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@691d6e89
+2022-05-19 09:03:49,404 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5aed5938
+2022-05-19 09:03:49,425 DEBUG com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b596a53
+2022-05-19 09:03:49,425 DEBUG com.zaxxer.hikari.pool.HikariPool [HikariPool-1 connection adder] HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 09:03:50,010 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2022-05-19 09:03:50,011 DEBUG com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2022-05-19 09:03:50,012 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3f4a605f: (connection evicted)
+2022-05-19 09:03:50,015 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6fc0e43: (connection evicted)
+2022-05-19 09:03:50,017 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@572e20c5: (connection evicted)
+2022-05-19 09:03:50,018 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@49c01920: (connection evicted)
+2022-05-19 09:03:50,019 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@53601b52: (connection evicted)
+2022-05-19 09:03:50,022 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@71c78e03: (connection evicted)
+2022-05-19 09:03:50,024 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6fddfb3a: (connection evicted)
+2022-05-19 09:03:50,026 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@691d6e89: (connection evicted)
+2022-05-19 09:03:50,027 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5aed5938: (connection evicted)
+2022-05-19 09:03:50,028 DEBUG com.zaxxer.hikari.pool.PoolBase [HikariPool-1 connection closer] HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7b596a53: (connection evicted)
+2022-05-19 09:03:50,030 DEBUG com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2022-05-19 09:03:50,030 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2022-05-19 09:03:50,065 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\46736\webb\userprofile\target\classes\com\example\userservice\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\46736\webb\userprofile\target\classes\com\example\userservice\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.example.userservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! Reason: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.example.userservice.UserServiceApplication.main(UserServiceApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\46736\webb\userprofile\target\classes\com\example\userservice\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.example.userservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! Reason: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.example.userservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! Reason: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! Reason: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1061)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:364)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:322)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:328)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.example.userservice.entity.User com.example.userservice.repository.UserRepository.findByUsername(java.lang.String)! No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:113)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:87)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 66 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'username' found for type 'User'! Did you mean ''userName''?
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:249)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:250)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:383)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:384)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:95)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 70 common frames omitted

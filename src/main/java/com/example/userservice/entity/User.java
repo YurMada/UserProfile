@@ -1,20 +1,26 @@
 package com.example.userservice.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
+@Table(name = "`user`")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Lob
+    @Column(name = "id")
     private Long id;
+    @Column(name = "userName", length = 100)
     private String userName;
+    @Column(name = "firstName", length = 100)
     private String firstName;
+    @Column(name = "lastName", length = 100)
     private String lastName;
+    @Column(name = "email", length = 200)
     private String email;
+    @Column(name = "birth")
     private Date birth;
 
 
