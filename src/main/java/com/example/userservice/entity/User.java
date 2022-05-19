@@ -12,7 +12,7 @@ public class User {
     @Lob
     @Column(name = "id")
     private Long id;
-    @Column(name = "userName", length = 100)
+    @Column(name = "username", length = 100)
     private String userName;
     @Column(name = "firstName", length = 100)
     private String firstName;
