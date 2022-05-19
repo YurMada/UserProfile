@@ -28,14 +28,7 @@ public class UserController {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    @PostMapping("signup")
-    public ResponseEntity createUser(@RequestBody User user) {
-        if (user == null)
-            throw new BadRequestException("This field cannot be empty");
-        User newUser = userService.createUser(user);
-        logger.trace("vi loggar på DEBUG-nivå ");
-        return new ResponseEntity(newUser, HttpStatus.CREATED);
-    }
+
 
     @GetMapping("{id}")
     public Optional<User> findUserById(@PathVariable String id) {

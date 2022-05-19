@@ -1,5 +1,5 @@
 ###
-POST http://localhost:8080/signup
+PUT http://localhost:8080/1L
 Content-Type: application/json
 
 {
