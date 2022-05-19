@@ -12,6 +12,7 @@ services:
     depends_on:
       - rabbitmq
       - mysql
+      - consul
 
   rabbitmq:
     image: rabbitmq:3-management
