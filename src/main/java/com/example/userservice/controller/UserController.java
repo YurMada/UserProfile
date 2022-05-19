@@ -25,6 +25,8 @@ UserRepository userRepository;
         this.rabbitTemplate = rabbitTemplate;
     }
 
+
+
     @GetMapping("{id}")
     public Optional<User> getUser(@PathVariable("id") Long id) {
         return userService.findUserById(id);
