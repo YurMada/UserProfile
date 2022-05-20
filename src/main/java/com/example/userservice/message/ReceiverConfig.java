@@ -17,7 +17,6 @@ public class ReceiverConfig {
 
     @Bean
     Queue queue() {
-       // return new AnonymousQueue();
         return new Queue("search-service", false);
     }
 
