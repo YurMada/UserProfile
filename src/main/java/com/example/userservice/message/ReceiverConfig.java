@@ -13,11 +13,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ReceiverConfig {
 
-    static final String exchangeName = "user-service";
+    static final String exchangeName = "auth_message_exchange";
+
 
     @Bean
     Queue queue() {
-        return new Queue("search-service", false);
+      return new Queue("user-service", false);
     }
 
     @Bean
@@ -27,7 +28,7 @@ public class ReceiverConfig {
 
     @Bean
     Binding binding(Queue queue, TopicExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with("search-service");
+        return BindingBuilder.bind(queue).to(exchange).with("user.new");
     }
 
     @Bean
