@@ -4,6 +4,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.security.Key;
 import java.security.KeyPair;
 import java.util.Base64;
 
@@ -11,8 +13,7 @@ import java.util.Base64;
 public class UserServiceApplication {
 
     public static void main(String[] args) {
-
-
+       // Key key= Keys.hmacShaKeyFor(user.new);
         KeyPair keyPair = Keys.keyPairFor(SignatureAlgorithm.ES256);
         System.out.println(keyPair.getPrivate());
         System.out.println(Base64.getEncoder().encodeToString(keyPair.getPublic().getEncoded()));

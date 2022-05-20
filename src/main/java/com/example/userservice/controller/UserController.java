@@ -14,9 +14,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("users")
 
-public class UserController {
-
-
+public class UserController{
     UserService userService;
     Logger logger = LoggerFactory.getLogger(UserController.class);
     RabbitTemplate rabbitTemplate;
@@ -27,7 +25,6 @@ public class UserController {
     public UserController(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
     }
-
 
 
     @GetMapping("{id}")
@@ -41,8 +38,8 @@ public class UserController {
     @PutMapping("{id}")
      User update(@PathVariable(value = "id") @RequestBody User user) {
         userService.saveOrUpdate(user);
-        String messageString = "Updated user";
-        rabbitTemplate.convertAndSend(topicExchangeName, "search-service", messageString);
+        String messageString = String.valueOf(user.getId());
+        rabbitTemplate.convertAndSend(topicExchangeName, "user.updated", messageString);
 
         return user;
     }
