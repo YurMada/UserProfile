@@ -8,5 +8,9 @@ Content-Type: application/json
 "lastName":"larsson"
 }
 ###
-GET http://localhost:8080/users/1L
-
+POST http://localhost:8080/register
+Content-Type: application/json
+{
+"username": "anna.andersson@gmail.com",
+"password": "test"
+}

@@ -13,7 +13,6 @@ import java.util.Base64;
 public class UserServiceApplication {
 
     public static void main(String[] args) {
-       // Key key= Keys.hmacShaKeyFor(user.new);
         KeyPair keyPair = Keys.keyPairFor(SignatureAlgorithm.ES256);
         System.out.println(keyPair.getPrivate());
         System.out.println(Base64.getEncoder().encodeToString(keyPair.getPublic().getEncoded()));

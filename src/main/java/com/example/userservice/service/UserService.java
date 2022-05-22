@@ -4,6 +4,7 @@ import com.example.userservice.entity.User;
 import com.example.userservice.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.security.core.userdetails.*;
@@ -30,5 +31,8 @@ public class UserService {
         return user;
     }
 
+   public Iterable<User> findAllUsers() {
+        return userRepository.findAll();
+    }
 }
 
