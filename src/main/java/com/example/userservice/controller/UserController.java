@@ -6,10 +6,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("users")
+@RequestMapping("/users")
 
 public class UserController{
     UserService userService;
@@ -29,9 +31,13 @@ public class UserController{
         logger.trace("vi loggar på DEBUG-nivå");
 
         return userService.findUserById(Long.valueOf(id));
-
     }
+    @GetMapping("")
+    public List<User> getAll() {
+        logger.trace("vi loggar på DEBUG-nivå");
 
+        return (List<User>) userService.findAllUsers();
+    }
     @PutMapping("{id}")
      User update(@PathVariable(value = "id") @RequestBody User user) {
         userService.saveOrUpdate(user);
