@@ -3,11 +3,7 @@ package com.example.userservice.service;
 import com.example.userservice.entity.User;
 import com.example.userservice.repository.UserRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
-
-import org.springframework.security.core.userdetails.*;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 @Service()
 public class UserService {

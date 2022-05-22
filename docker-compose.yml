@@ -9,6 +9,8 @@ services:
     environment:
       - SPRING_RABBITMQ_HOST=rabbitmq
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/user
+      - MYSQL_HOST=mysql
+      - CONSUL_HOST=consul
     depends_on:
       - rabbitmq
       - mysql
