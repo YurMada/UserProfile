@@ -10,7 +10,7 @@ services:
       - SPRING_RABBITMQ_HOST=rabbitmq
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/user
       - MYSQL_HOST=mysql
-      - CONSUL_HOST=consul
+      - CONSUL_CONTAINER=consul
     depends_on:
       - rabbitmq
       - mysql
